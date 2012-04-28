@@ -1,6 +1,6 @@
 import Control.Concurrent
 import Control.Monad
-import System.Hotswap
+import System.Plugins.Hotswap
 
 main :: IO ()
 main = do
