@@ -2,6 +2,7 @@ module System.Plugins.Hotswap (
     Plugin (..), 
     newPlugin,
     usePlugin, 
+    usePluginIO,
     reloadPlugin, 
     readPlugin, 
     withPlugin,
