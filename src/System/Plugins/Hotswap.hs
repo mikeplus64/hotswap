@@ -6,7 +6,8 @@ module System.Plugins.Hotswap (
     reloadPlugin, 
     readPlugin, 
     withPlugin,
-    withPluginIO
+    withPluginIO,
+    putPlugin
 ) where
 
 import System.Plugins.Load
