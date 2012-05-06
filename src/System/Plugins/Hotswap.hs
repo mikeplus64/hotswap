@@ -32,7 +32,7 @@ usePluginIO :: Plugin (a -> IO b) -> a -> IO b
 usePluginIO plug x = readPlugin plug >>= ($ x)
 
 -- | 'runPlugin' runs an 'IO a' returning 'Plugin'.
-runPlugin :: Plugin (IO ()) -> IO ()
+runPlugin :: Plugin (IO a) -> IO a
 runPlugin plug = readPlugin plug >>= id
 
 -- | 'withPlugin' provides a way to run a function on a plugin, modifying the plugin in-place.

@@ -3,12 +3,7 @@ import System.Plugins.Hotswap
 
 main :: IO ()
 main = do
-    inputHandler <- newPlugin "Plugin.o" [] "inputHandler" :: IO (Plugin (String -> String))
-    hotswap      <- newHotswap inputHandler
-
+    inputHandler <- newPlugin "Plugin.o" [] "inputHandler" :: IO (Plugin (IO Bool))
     forever $ do
-        l <- getLine
-        case l of
-            "killHotswap"    -> killHotswap hotswap
-            "restartHotswap" -> reloadPlugin inputHandler >> restartHotswap hotswap
-            _                -> putStrLn =<< usePlugin inputHandler l
+        r <- runPlugin inputHandler
+        when r $ reloadPlugin inputHandler
