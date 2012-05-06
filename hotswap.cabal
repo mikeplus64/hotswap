@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                hotswap
-version:             0.1.9.12
+version:             0.1.9.13
 synopsis:            Simple code hotswapping.
 description:         A simple, high-level interface to plugins.
 homepage:            https://github.com/mikeplus64/hotswap
