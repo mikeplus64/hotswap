@@ -16,5 +16,5 @@ inputHandler = do
             r <- randomRIO (0, 10) :: IO Int
             if g == r
                 then putStrLn "Congratulations! You win nothing!"
-                else putStrLn "Wrong! You lose nothing, but bring shame to your people."
+                else putStrLn "HAHA, YOU'RE HORRIBLE"
             return False
