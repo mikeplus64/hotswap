@@ -20,4 +20,4 @@ library
   hs-source-dirs:      src
   exposed-modules:     System.Plugins.Hotswap
   -- other-modules:       
-  build-depends:       base == 4.5.*, plugins == 1.5.*
+  build-depends:       base >= 4.5.0, plugins >= 1.5.0
